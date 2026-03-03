@@ -1,0 +1,2 @@
+scenario,metric,best_strategy,best_target_frac,best_net_gain,baseline_net_gain,improve_pct_vs_baseline
+harm,net_gain,policy_best_coupon_by_prediction@score_value,0.5,114349.44125823496,49744.28169458338,129.87454509909307

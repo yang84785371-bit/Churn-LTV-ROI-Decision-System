@@ -1,0 +1,5 @@
+strategy,scenarios,mean_metric,worst_case_metric,best_frac_median,best_frac_mean
+policy_best_coupon_by_prediction@score_value,5,144519.7643966126,114349.44125823496,0.5,0.5
+policy_best_coupon_by_prediction@score_joint,5,134892.84352050288,106564.45855994915,0.5,0.5
+policy_best_coupon_by_prediction@score_random,5,70020.82868679856,49744.28169458338,0.5,0.5
+policy_best_coupon_by_prediction@score_churn,5,5376.730972703837,395.034025609878,0.5,0.32
