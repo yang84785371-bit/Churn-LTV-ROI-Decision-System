@@ -1,0 +1,15 @@
+events_weekly:
+  description: "Unified weekly user event table for both simulation and real data."
+  primary_keys: ["user_id", "week_start"]
+  columns:
+    user_id: {type: "string", desc: "User identifier (Online Retail: CustomerID)"}
+    week_start: {type: "date", desc: "Week start date (Monday-based)"}
+    active: {type: "int", desc: "1 if user has any transaction in the week else 0"}
+    orders: {type: "int", desc: "Number of unique invoices in the week"}
+    items: {type: "float", desc: "Sum of quantities (net) in the week"}
+    revenue: {type: "float", desc: "Net revenue in the week (sales - refunds)"}
+    refund: {type: "float", desc: "Refund amount (absolute) in the week"}
+    margin: {type: "float", desc: "Net margin in the week (approx if needed)"}
+    promo_flag: {type: "int", desc: "Promo indicator (0/1). Real data default 0"}
+    touch_flag: {type: "int", desc: "Touch indicator (0/1). Only in simulation; real default 0"}
+    touch_cost: {type: "float", desc: "Touch cost. Only in simulation; real default 0"}

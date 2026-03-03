@@ -1,0 +1,27 @@
+time_grain: "weekly"
+week_start: "MON"
+
+lookback_weeks: 8
+horizon_weeks: 4
+
+labels:
+  churn:
+    definition: "No activity in next horizon weeks => churn=1"
+    rule: "future_active_sum == 0"
+  ltv:
+    definition: "Sum of margin in next horizon weeks"
+    target: "future_margin_sum"
+
+margin:
+  use_margin: true
+  margin_rate_default: 0.30
+  sensitivity_rates: [0.25, 0.30, 0.35]
+
+splits:
+  method: "time_based"
+  train_ratio: 0.70
+  valid_ratio: 0.15
+  test_ratio: 0.15
+
+rolling_samples: true
+min_history_weeks: 8
